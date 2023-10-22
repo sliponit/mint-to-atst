@@ -1,0 +1,14 @@
+{
+  "name": "eas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts/attest.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sliponit",
+  "license": "MIT",
+  "dependencies": {
+    "@ethereum-attestation-service/eas-sdk": "^1.2.1-beta.1"
+  }
+}

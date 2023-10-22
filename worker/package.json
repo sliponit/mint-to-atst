@@ -10,5 +10,8 @@
   "scripts": {
     "start": "wrangler dev",
     "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@ethereum-attestation-service/eas-sdk": "^1.2.1-beta.1"
   }
 }

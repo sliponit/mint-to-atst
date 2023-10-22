@@ -31,11 +31,14 @@ export default {
 		if (request.method.toUpperCase() === "GET") return new Response("OK");
     if (request.method.toUpperCase() !== "POST") return new Response("Invalid method");
 
-		try {
-			const body = await request.json()
-			console.log('TODO??', body)
+		try { // TODO check signature
+			const body = await request.json();
+			const fromAddress = body?.event?.activity[0]?.fromAddress;
+			if (!fromAddress) throw new Error("Invalid Body");
+
+			console.log('TODO??', { fromAddress });
 			return new Response("OK");
-		}  catch (e) {
+		} catch (e) {
       return new Response("Error thrown " + e.message);
     }
 		
